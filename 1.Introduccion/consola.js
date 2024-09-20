@@ -17,3 +17,13 @@ if(edad<= 18){
     console.warn("eres menor")
 }
 console.timeEnd("Tiempo de ejecucion")
+
+//mensaje de tipo tabla
+console.table("soy una tabla, edwin es un clavo")
+lenguajes=[
+    {nombre_:"javascript",extension:".js"},
+    {nombre_:"python",extension:".py"},
+    {nombre_:"php",extension:".php"}
+ ]
+ console.log(lenguajes)
+ console.table(lenguajes)
