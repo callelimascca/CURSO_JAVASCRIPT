@@ -10,6 +10,7 @@
   - [Naiming](#naiming)
   - [Usos incorrectos](#usos-incorrectos)
   - [Usos correctos](#usos-correctos)
+  - [Interfaz de linea de comandos](#interfaz-de-linea-de-comandos)
 ## Comentarios
 Es la parte dentro de mi archivo de codigo que no es leido ni ejecutado por el interprete de `js`.
 > [!TIP]
@@ -112,5 +113,5 @@ Las variables tienen reglas muy especifica que debemos seguir a la hora de desig
 >  ```
 
 ## Interfaz de linea de comandos
-> CLI Editor de texto que trabaja o funciona por la terminal ()
-> GUI Posee interfaz grafica
+- CLI Editor de texto que trabaja o funciona por la terminal ()
+- GUI Posee interfaz grafica
