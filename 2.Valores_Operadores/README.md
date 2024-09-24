@@ -49,6 +49,10 @@ Los valores de tipo numero como es de esperar son numero y en javascript se escr
 > [!WARNING]
 > Cuando javascript realiza operacion con numeros enteros el resultado simepre sera exacto, cuando realice operaciones con numeros decimales el resulado perdera presicion por que solo tiene 64 bits para almacenar esto suele ocurrir con resultados cuyos decimales sean infinitos com en el caso del numero pi. **Es nuestra responsabilidad como programador hacer el uso de los decimales con aproximaciones para evitar errores.**
 
+> [!TIP]
+> Cuando javascript hace trabajo de memoria **(cuando crea un patron de bits para almacenar)** todos los numeros son almacenados como decimal positivo.
+
+
 - **NUMEROS ESPECIALES**
   En JavaScript existen tres valores de tipo numero que se consideran un dato primitivo numerico de tipo especial.
 
@@ -57,12 +61,10 @@ Los valores de tipo numero como es de esperar son numero y en javascript se escr
   - Infinity // cuando la operacion es de numeros negativo.
   NaN //not a number ("no es un numero").
   // cuando el resultado de la operacion es matematicamente imposible te muestra el msj de (NaN).
+ 
   ```
-  
+#### - Aritmetica (Operadores aritmeticos) 
+
    
-
-> [!TIP]
-> Cuando javascript hace trabajo de memoria **(cuando crea un patron de bits para almacenar)** todos los numeros son almacenados como decimal positivo.
-
 - tipos (tipos de datos)
 - operadores
