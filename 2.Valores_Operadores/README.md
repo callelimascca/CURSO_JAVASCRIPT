@@ -9,6 +9,8 @@
       - [Cadena (string)](#cadena-string)
       - [Concatenacion](#concatenacion)
       - [Plantillas literares](#plantillas-literares)
+      - [Operadores Unarios](#operadores-unarios)
+      - [Valores BooleanO](#valores-booleano)
 ## Valores
 Imagina un mar de bits
 
@@ -165,4 +167,37 @@ Para hacer uso de esta funcionalidad debemos usar, la expresion `${}`
 
 ```
 > [!TIP]
-> Se dice literal porque con el formato que codificamos sera mostrado de esa misma forma en la consola 
+> Se dice literal porque con el formato que codificamos sera mostrado de esa misma forma en la consola.
+
+#### Operadores Unarios
+No todos los operadores son simbolo, algunos se escriben como palabras.
+Un ejemplo es el operador`typeof`, es el operador que produce un valor de cadena que indica el tipo de valor que le proporcionamos.
+`Operadores binarios` se les conoce por que operan sobre dos valores `2*5`
+
+```js
+//para poder ver su funcionalidad o valor que genera siempre debemos mostrarlo en un console
+console.log(typeof 5)
+```
+#### Valores BooleanO
+este tipo de dato primitivo es util cuando tenemos un valor que distinga solo entre dos posibilidades, como `si` y `no` o `encendido` y `apagado`.
+para este proposito, JavaScript tiene dos tipos de datos `Booleano`, que tiene solo dos valores, `True` y `False`.
+
+**Que formas de producir valores booleanos tenemos?**
+1. **Usando operadores de comparacion**: 
+   Los operadores de comparacion son:
+   - Mayor que (>)
+   - Menor que (<)
+   - Mayor o igual que (>=)
+   - Menor o igual que (<=)
+   - Igual a (===)
+   - Estrictamente igual (===)
+   - No es igual a (!=)
+  
+2. **Operadores Logicos**:
+   JavaScript soporta tres operadores logicos:
+   - AND (Y) EN JAVASCRIPT `&&`.
+   - OR (O) EN JAVASCRIPT `||`.
+   - NOT (NO) EN JAVASCRIPT `!`, 
+  **OBSERVACIO:NOT este es un operador unario que su funcion es invertir el valor que tiene a su derecha `!TRUE` produce `FALSE`**
+
+3.****
