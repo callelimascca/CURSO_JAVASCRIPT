@@ -50,4 +50,11 @@ console.log(!false)//TRUE
 //Averiguar: por que muestra falso.
 console.log(["hola"] in ["hola", "mundo"])
 
-// p
+/*En JavaScript, la expresión "a" in ["a", "e"] da como resultado false porque el operador in se utiliza para verificar si una propiedad existe en un objeto, o un índice en un array, no el valor en sí.
+En este caso, ["a", "e"] es un array, y "a" no es un índice válido de ese array. Los índices válidos para este array son 0 y 1.
+Para verificar si el valor "a" está presente en el array, deberías usar el método includes()*/
+// EJEMPLO:
+array = ["a", "e"]
+resultado = array.includes("a") // Esto devolverá true
+console.log(resultado) // true
+//Así que, para comprobar la presencia de un valor en un array, includes() es el método correcto a usar.
