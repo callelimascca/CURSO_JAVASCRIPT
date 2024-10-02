@@ -82,6 +82,8 @@ Los valores de tipo numero como es de esperar son numero y en javascript se escr
  - division (/).
  - potencia (**).
  - modulo (%).
+ - incremento (++)
+ - decremento (--)
   
 **Podemos agrupar operaciones con parentesis () las operaciones que esten entre las parentesis se jecutaran primero**
 
@@ -163,8 +165,6 @@ Para hacer uso de esta funcionalidad debemos usar, la expresion `${}`
 // creando una plantilla literal -- template literals
 
 //usando JS dentro de una plantilla literal
-
-
 ```
 > [!TIP]
 > Se dice literal porque con el formato que codificamos sera mostrado de esa misma forma en la consola.

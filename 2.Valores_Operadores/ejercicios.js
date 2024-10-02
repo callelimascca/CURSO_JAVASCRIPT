@@ -24,3 +24,12 @@ console.log("6.-", (2 + 4 + 6) / (2 + (4+3)))
 console.log("7.-", 2 + 3 + (4 / (3*2)) / 1 + 3 * (10/2))
 //8.-
 console.log("8.-", 1 + (6/3) + 3 / 2 )
+
+//crear una variable de numero y mostrar por terminal el nuevo sumado mas uno
+numero=10
+console.log(++numero)
+
+//crear una variable que almacene um numero y que por terminal me muestre el numero original y luego el numero sumado mas uno
+num=12
+console.log(num++)
+console.log(num)
