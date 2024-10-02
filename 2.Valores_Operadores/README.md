@@ -10,7 +10,8 @@
       - [Concatenacion](#concatenacion)
       - [Plantillas literares](#plantillas-literares)
       - [Operadores Unarios](#operadores-unarios)
-      - [Valores BooleanO](#valores-booleano)
+      - [Valores Booleano](#valores-booleano)
+      - [OPERADOR TERNARIO (utiliza 3 valores):](#operador-ternario-utiliza-3-valores)
 ## Valores
 Imagina un mar de bits
 
@@ -178,7 +179,7 @@ Un ejemplo es el operador`typeof`, es el operador que produce un valor de cadena
 //para poder ver su funcionalidad o valor que genera siempre debemos mostrarlo en un console
 console.log(typeof 5)
 ```
-#### Valores BooleanO
+#### Valores Booleano
 este tipo de dato primitivo es util cuando tenemos un valor que distinga solo entre dos posibilidades, como `si` y `no` o `encendido` y `apagado`.
 para este proposito, JavaScript tiene dos tipos de datos `Booleano`, que tiene solo dos valores, `True` y `False`.
 
@@ -200,4 +201,24 @@ para este proposito, JavaScript tiene dos tipos de datos `Booleano`, que tiene s
    - NOT (NO) EN JAVASCRIPT `!`, 
   **OBSERVACIO:NOT este es un operador unario que su funcion es invertir el valor que tiene a su derecha `!TRUE` produce `FALSE`**
 
-3.****
+> [!TIP] 
+> **AND `&&`** - si tenemos dos valores verdaderos devolvera el segundo valor verdadero, si tenemos un valor falso y uno verdadero devolvera el valor falso
+>
+> **OR `||`** - Si tenemos dos valores verdaderos devolvera el primer valor verdadero, si tenemos un valor verdadero y uno falso devolvera el valor verdadero (sea cual sea la posicion).
+
+>[!TIP]
+> APARTIR DE ENMASCRIPT6 SE USA **(ES6)** `??`
+
+3. **Usando el operador relacional**:
+   Este operador compara sus valores y retorna un booleano como resultado.
+   Lo que evalua este operador es si propiedad especifica se encuentra en un objeto.
+   Evalua que si el primer valor que se encuentra a su izquierda forma parte del segundo valor que se encuentra a su derecha.
+
+   ```js
+   "a" in ["a","e","i","o","u"]
+   ```
+#### OPERADOR TERNARIO (utiliza 3 valores):
+Este operador trabaja con 3 valores.
+El primer valor es el que determinara si se muestra el resto de los valores.
+Eso quiere decir que si el primer valor es verdadero mostrara el segundo valor mientras que si falso mostrara el tercer valor
+![alt text](image.png)
