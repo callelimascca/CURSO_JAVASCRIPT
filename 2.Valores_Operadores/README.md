@@ -1,7 +1,6 @@
 # VALORES, TIPOS Y OPERADORES
-## Indice
+ INDICE
 - [VALORES, TIPOS Y OPERADORES](#valores-tipos-y-operadores)
-  - [Indice](#indice)
   - [Valores](#valores)
     - [Datos primitivos:](#datos-primitivos)
       - [Numeros(Number):](#numerosnumber)
