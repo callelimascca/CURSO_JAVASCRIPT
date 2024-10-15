@@ -10,4 +10,4 @@ if (typeof edad == "number"){
 //console.log(typeof numero)
 
 //EJEMPLO DE CONDICION SIMPLE DE UNA SOLA LINEA
-if (1+1==2) console.log("es verdad");
+if (1+1==2) console.log("es verdad");console.log()

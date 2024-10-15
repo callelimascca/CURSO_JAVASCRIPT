@@ -1,7 +1,8 @@
 # Practica uno del capitulo 3
 ## INSTRUCCIONES
 - Crear un `index.html` con la estructura basica.
-- Asociar el archivo `js`
+- Asociar el archivo `js` con el archivo index.html.
+- Realizar los ejercicios 
 
 ## EJERCICIOS:
 ### 1. Pedir al usuario dos numeros al realizar el producto de ambos determinar en una condicion de una sola linea si el resultado es mayor a 100.
