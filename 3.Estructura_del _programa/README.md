@@ -5,7 +5,7 @@
   - [Indice](#indice)
   - [INTERACCION BASICA CON EL USUARIO](#interaccion-basica-con-el-usuario)
   - [EXPRESIONES Y DECLARACIONES](#expresiones-y-declaraciones)
-  - [BINDINGS (ENLACES)](#bindings-enlaces)
+  - [BINDING (ENLACES)](#binding-enlaces)
   - [EL ENTORNO](#el-entorno)
   - [CONTROL DE FLUJO](#control-de-flujo)
     - [Ejecucion Condicional](#ejecucion-condicional)
@@ -43,7 +43,7 @@ respuesta=window.prompt("como te llamas")
 let estado=!false; // el ; nos ayuda a dar sentido a al declaracion y finalizar
 ```
 
-## BINDINGS (ENLACES)
+## BINDING (ENLACES)
 Cunado creamos un valor estos valores son volatiles solo existen en la ejecucion del programa y solo cuando son llamados.
 El bindings o enlace es la manera que JavaScript recuerda los valores y mantiene un estado interno asi como la reutilizacion del valor.
 
