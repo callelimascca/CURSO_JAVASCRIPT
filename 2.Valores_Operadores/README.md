@@ -189,7 +189,7 @@ para este proposito, JavaScript tiene dos tipos de datos `Booleano`, que tiene s
    - Menor que (<)
    - Mayor o igual que (>=)
    - Menor o igual que (<=)
-   - Igual a (===)
+   - Igual a (==)
    - Estrictamente igual (===)
    - No es igual a (!=)
   

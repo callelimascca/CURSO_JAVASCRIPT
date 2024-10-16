@@ -55,7 +55,7 @@ El bindings o enlace es la manera que JavaScript recuerda los valores y mantiene
 let edadPersona= 34 //enlace --> palabra reservada para el enlace "let" 
 //este enlace puede guardar varios valores
 let edadPersona=34
-//si deseamos que nuestro enlace solo apunte un solo valor entonces para crear este en lace debemos hacer uso de la keyword conts
+//si deseamos que nuestro enlace solo apunte un solo valor entonces para crear este enlace debemos hacer uso de la keyword conts
 const edad=45
 //enlace siempre apuntara al valor 45 no podra modificar su enlace a otro valor
 ```
@@ -83,6 +83,18 @@ Una sentencia se ejecuta como si fuera una historia de arriba a abajo.
 let elNumero=prompt("Elije un numero:") 
 console.log("tu numero es la raiz cuadrada de:" +elNumero* el numero) 
 //primero le pide al usuario un numero y despues muestra un mensaje y el cuadro de ese numero
+//CONTROL DE FULJO LINEAL
 ```
 ### Ejecucion Condicional
 Hacemos uso de este control de flujo cuando tenemos distintos caminos o distintos mensajes que deseamos mostrar segun una condicion.
+
+**Como creamos una condicion**
+La ejecucion condicional se crea con la palabra reservada (keyword)`let` (para crear una variable), `if` a continuacion de una `condicion` en llaves `{}` se escribira el cuerpo del codigo que deseo ejecutar en caso que la condicion sea `verdadera`
+
+- **Condicion simple `if`:**
+  ```js
+  let comparacion= 5>4
+  if true{
+    prompt("escribe tu nombre: ")
+  }
+  ```
