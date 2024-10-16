@@ -55,7 +55,7 @@ El bindings o enlace es la manera que JavaScript recuerda los valores y mantiene
 let edadPersona= 34 //enlace --> palabra reservada para el enlace "let" 
 //este enlace puede guardar varios valores
 let edadPersona=34
-//si deseamos que nuestro enlace solo apunte un solo valor entonces para crear este enlace debemos hacer uso de la keyword conts
+//si deseamos que nuestro enlace solo apunte un solo valor entonces para crear este en lace debemos hacer uso de la keyword conts
 const edad=45
 //enlace siempre apuntara al valor 45 no podra modificar su enlace a otro valor
 ```
@@ -83,18 +83,41 @@ Una sentencia se ejecuta como si fuera una historia de arriba a abajo.
 let elNumero=prompt("Elije un numero:") 
 console.log("tu numero es la raiz cuadrada de:" +elNumero* el numero) 
 //primero le pide al usuario un numero y despues muestra un mensaje y el cuadro de ese numero
-//CONTROL DE FULJO LINEAL
+let comparacion=5>4
+if comparacion {
+  prompt("escribe")
+}
 ```
 ### Ejecucion Condicional
 Hacemos uso de este control de flujo cuando tenemos distintos caminos o distintos mensajes que deseamos mostrar segun una condicion.
 
-**Como creamos una condicion**
-La ejecucion condicional se crea con la palabra reservada (keyword)`let` (para crear una variable), `if` a continuacion de una `condicion` en llaves `{}` se escribira el cuerpo del codigo que deseo ejecutar en caso que la condicion sea `verdadera`
-
-- **Condicion simple `if`:**
+- **Condicion simple `if` de una sola linea**
   ```js
-  let comparacion= 5>4
-  if true{
-    prompt("escribe tu nombre: ")
+  if (1+1==2) console.log("es verdad")
+  ```
+- **Condicion de doble evaluacion `if else`** --
+Existen casos en los que tendremos que ejecutar un codigo si es verdad y tambien si es falso. ejecucion condicional de dos caminos
+  ```js
+  let edadPersona= 16;
+  if (edadPersona =>18){
+    console.log("eres mayor de edad"):
+  }
+  else{
+    console.log("eres menor")
   }
   ```
+- **Condicion multiple `if` `else if`** -- 
+Se utiliza cuando se tine que evaluar y devolver varias opciones o multiples respuestas.
+  ```js
+   let total_compra=30 //501  //105
+  if (total_compras > 50 && total_compra < 100) {
+    console.log(`tiene un descuento del 10% ${total_compra * 0.10`)
+  }
+  else if (total_compras > 100 && total_compra < 500){
+    console.log(`tines un descuento del 20% ${total_compra * 0.20}`)
+  }
+  else{
+    console.log(`tines el descuento de 50% ${total_compra * 0.50}`)
+  }
+  ```
+  
