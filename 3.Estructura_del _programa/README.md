@@ -121,6 +121,23 @@ Se utiliza cuando se tine que evaluar y devolver varias opciones o multiples res
     console.log(`tines el descuento de 50% ${total_compra * 0.50}`)
   }
   ```
+- **Condicion multiple `switch`**-- consume mucha energia
+  JavaScript dispone de una opcion para crear estructuras codicionales multiples. `switch` permite crear etsructuras mas optimizadas para cubrir un amplio abanico de posibilidades.
+```js
+let edad=Number(prompt("Ingrese su edad"))
+switch (edad){
+  case 4: 
+    console.log("tienes 4 año")
+    break
+  case 8:
+    console.log("tienes 8 año")
+    break
+  default:
+    console.log("tienes:" , edad)
+    break
+}
+```
+
 ### BUCLES
 Consideremos el siguiente problema
 Crear un programa que imprima del 1 al 12 una forma seria el sguiente:
