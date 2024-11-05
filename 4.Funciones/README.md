@@ -10,6 +10,7 @@ FUNCIONES
   - [Diferencias:](#diferencias)
   - [Binding](#binding)
 - [La pila de llamadas (CALL STACK)](#la-pila-de-llamadas-call-stack)
+- [CLOSURE o Funciones de cierrre (Funciones que retorna funciones)](#closure-o-funciones-de-cierrre-funciones-que-retorna-funciones)
   
 Las funciones en JS son `bloques de codigo ejecutable` a los que podemos pasar parametro y operar con ellos. Nos sirve para modular o `modularizar` nuestro programa y estructurar en bloques  que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible.
 Las funciones normalmente al acabar `devuelve un valor`, que conseguimos con el parametro `retunr`.
@@ -186,4 +187,28 @@ fucntion comer(){
     console.log("comiendo la ensalada")
 }
 comer()
+```
+## CLOSURE o Funciones de cierrre (Funciones que retorna funciones)
+Un `closure` es una funcion que encapsula una serie de variables y definiciones locales que unicamente seran accesibles si son devueltas con el (`keyword`) `return`.
+Antes de que aparesca la version `ecma 6` los `closure` eran un patron creacional que nos permitia modularizar nuestro codigo, en lugar de usar las `clases` que eran populares en otros lenguajes pero que javascript aun no lo implementaba.
+```js
+//una funcion que retorna otra funcion (por lo general es una funcion `anonima`)
+// funcion CLASICA
+function retornaValor(n){
+    return n + 1
+}
+retornaValor(10)//llamando a la funcion CLASICA
+//funcion CLOSURE
+function retornaValor(n){
+    return function(){
+        return n + 1
+    }
+}
+retornaValor(10)()//llamando a la funcion CLOSURE
+```
+>[!NOTE]
+> Las funciones `CLOSURE` son usadas por que pueden mantener el valor de sus enlaces o variables locales en todo el proceso de la ejecucion de su funcion padre por cada llamada que se le realize.
+```js
+
+
 ```
