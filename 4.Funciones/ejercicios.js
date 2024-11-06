@@ -15,40 +15,26 @@
 //Ejercicio 2
 // crear un programa que pida registrar el nombre de un producto, el usuario podra luego eliminar el producto o actualizar el nombre del producto.
 // observacion al realizar la actualizacion podre ver el valor anterior como el valor nuevo.
-function pedirProducto() {
-    this.nombreProducto = '';
+function pedirProducto(){
+    this.nombreProducto = prompt("Ingresa el nombre del producto:");
 
-    this.registrarProducto = function() {
-        this.nombreProducto = prompt("Ingresa el nombre del producto:");
-        console.log(`Producto registrado: ${this.nombreProducto}`);
+    this.mostrarProducto = function(){
+        console.log(`Producto actual: ${this.nombreProducto}`);
     };
 
-    this.actualizarProducto = function() {
-        const nombreAnterior = this.nombreProducto;
+    this.actualizarProducto = function(){
         const nuevoNombre = prompt("Ingresa el nuevo nombre del producto:");
-
-        if (nuevoNombre) {
-            this.nombreProducto = nuevoNombre;
-            console.log(`Producto actualizado: Anterior: ${nombreAnterior}, Nuevo: ${this.nombreProducto}`);
-        } else {
-            console.log("No se ha realizado ninguna actualización.");
-        }
+        console.log(`Actualización: Producto anterior: ${this.nombreProducto}, Nuevo producto: ${nuevoNombre}`);
+        this.nombreProducto = nuevoNombre;
     };
-    this.eliminarProducto = function() {
-        if (this.nombreProducto) {
-            const confirmacion = confirm(`¿Estás seguro de que deseas eliminar el producto "${this.nombreProducto}"?`);
-            if (confirmacion) {
-                console.log(`Producto eliminado: ${this.nombreProducto}`);
-                this.nombreProducto = '';
-            } else {
-                console.log("El producto no ha sido eliminado.");
-            }
-        } else {
-            console.log("No hay ningún producto registrado para eliminar.");
-        }
+
+    this.eliminarProducto = function(){
+        console.log(`El producto "${this.nombreProducto}" ha sido eliminado.`);
+        this.nombreProducto = null;
     };
 }
-const producto = new pedirProducto();
-producto.registrarProducto();
-producto.actualizarProducto();
-producto.eliminarProducto();
+const adminProducto = new pedirProducto();
+adminProducto.mostrarProducto();       
+adminProducto.actualizarProducto();    
+adminProducto.mostrarProducto();       
+adminProducto.eliminarProducto();
