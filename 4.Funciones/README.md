@@ -208,7 +208,26 @@ retornaValor(10)()//llamando a la funcion CLOSURE
 ```
 >[!NOTE]
 > Las funciones `CLOSURE` son usadas por que pueden mantener el valor de sus enlaces o variables locales en todo el proceso de la ejecucion de su funcion padre por cada llamada que se le realize.
+
+### Closure tipo clase
+son funciones cuyo uso so iguales a las clases dentro de la ejecucion de una clase tenemos lo que se llama como `instancia` en JavaScript tenemos funciones `closure` que se pueden instanciar al igual que una clase, la diferencia con la funciones `closure clasicas` es que en esta hacemos uso de la palabra reservada `keyword` llamada `this`.
 ```js
-
-
+function contador(){
+    this.contador = 0 //objeto creado dentro de una funcion
+    this.incre= function(){
+        this.contador++
+    }
+    this.decre= function(){
+        this.contador--
+    }
+}
+let count1= new contador()//realizar la instancia
+count1.contador
 ```
+> [!NOTE]
+> La funcion **closure de tipo clase** no hace uso de `return` en sus funciones al hacer uso de `this` **casa funcion o variable estara enlazada al objeto que cree**.
+
+> [!WARNING]
+> El problema principal de este tipo de funcion, es que cuando creamos un nuevo objeto a partir de la funcion tipo clase , reservara espacio en memoria para toda la clase y su valor creados eso quiere decir variable y funciones, cada vez que llamamos a una funcion esta se replica en la memoria. 
+
+## Prototype (Tarea- averiguar y sus ejemplos)

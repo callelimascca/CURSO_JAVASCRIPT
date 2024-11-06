@@ -38,35 +38,50 @@ incre()
 valueCont()*/
 
 //FUNCION CLOSURE
-function contador(){
-    let contador = 0
-    function incre(){
-        return contador++
-    }
-    function decre(){
-        return contador--
-    }
-    function valueCont(){
-    console.log(contador)
-    }
-    return {
-        valueCont,
-        incre,
-        decre,
-    }
-}
-// let count1 = contador()//estado 
+// function contador(){
+//     let contador = 0
+//     function incre(){
+//         return contador++
+//     }
+//     function decre(){
+//         return contador--
+//     }
+//     function valueCont(){
+//     console.log(contador)
+//     }
+//     return {
+//         valueCont,
+//         incre,
+//         decre,
+//     }
+// }
+// // let count1 = contador()//estado 
+// // count1.valueCont()
+// // count1.incre()
+// // count1.valueCont()
+// let count1 = contador()
+// for (let i = 0; i < 5; i++){
+//     count1.incre()
+// }
 // count1.valueCont()
-// count1.incre()
-// count1.valueCont()
-let count1 = contador()
-for (let i = 0; i < 5; i++){
-    count1.incre()
-}
-count1.valueCont()
 
-let count2 = contador()
-for (let i = 0; i < 5; i++){
-    count2.decre()
+// let count2 = contador()
+// for (let i = 0; i < 5; i++){
+//     count2.decre()
+// }
+// count2.valueCont()
+
+//CLOSURE DE TIPO CLASE
+function contador(){
+    this.contador = 0 //objeto creado dentro de una funcion
+    this.incre= function(){
+        this.contador++
+    }
+    this.decre= function(){
+        this.contador--
+    }
 }
-count2.valueCont()
+let count1= new contador()//realizar la instancia
+console.log(count1.contador)
+count1.incre()
+console.log(count1.contador)
