@@ -11,6 +11,10 @@ FUNCIONES
   - [Binding](#binding)
 - [La pila de llamadas (CALL STACK)](#la-pila-de-llamadas-call-stack)
 - [CLOSURE o Funciones de cierrre (Funciones que retorna funciones)](#closure-o-funciones-de-cierrre-funciones-que-retorna-funciones)
+  - [Closure tipo clase](#closure-tipo-clase)
+- [Prototype (Tarea- averiguar y sus ejemplos)](#prototype-tarea--averiguar-y-sus-ejemplos)
+- [RECURSION EN FUNCIONES](#recursion-en-funciones)
+- [FUNCIONES CALLBACK](#funciones-callback)
   
 Las funciones en JS son `bloques de codigo ejecutable` a los que podemos pasar parametro y operar con ellos. Nos sirve para modular o `modularizar` nuestro programa y estructurar en bloques  que `realicen una tarea concreta`, de esta manera nuestro codigo es mas legible y mantenible.
 Las funciones normalmente al acabar `devuelve un valor`, que conseguimos con el parametro `retunr`.
@@ -231,3 +235,63 @@ count1.contador
 > El problema principal de este tipo de funcion, es que cuando creamos un nuevo objeto a partir de la funcion tipo clase , reservara espacio en memoria para toda la clase y su valor creados eso quiere decir variable y funciones, cada vez que llamamos a una funcion esta se replica en la memoria. 
 
 ## Prototype (Tarea- averiguar y sus ejemplos)
+Para crear un prototype tendremos que crear primero nuestra funcion principal que es la encargada de almacenar nuestra variables locales con las que trabajaremos.
+Luego accederemos al prototype de nuestra funcion creada y en valor o variable de tipo objeto le indicaremos las funciones que tendra nuestra funcion principal que interactuara con nuestras variables locales.
+```js
+function Contador(){
+    this.count=0
+    this.nombre=nombre
+}
+Contador.prototype={
+    incremento:function(){
+        this.count++
+        }, 
+    decremento:function(){
+        this.count--
+        },
+    mostrarDatos:function(){
+        return `${this.count}, ${this.nombre}`
+        }
+}
+```
+> [!NOTE]
+> Es una convencion usar  como nombre de nuestra funcion principal. 
+> 1. Que debe ser singular 
+> 2. Que use PascalCase
+
+## RECURSION EN FUNCIONES (tareas)
+## FUNCIONES CALLBACK (tareas)
+# CLASES 
+Las clases en javascript llegan en la version `ECMAScript6`, javascript no tenia al igual que en otros lenguajes de programacion orientadas a objetos las `clases` ya que javascript se enfocaba en la `programacion funcional` sin embargo con la llegada de `ES6` adopta ser un lenguaje de programacion multiparadigma, entre ellos la `programacion orientada de objetos` con la llegada de las `clases`.
+## Estructura de una clase en JavaScript
+Una clase esta separada en tres grandes secciones.
+1. El nombre de la clase que debera ser en `sigular y PascalCase`.
+2. Debera tener atributos (valor, variable) estos deberan ser `sustantivos` y estar escrito en `CamelCase`.
+3. Debera tener metodos (acciones, funciones) estos deberan ser verbos u estar escritos en `CamelCase`.
+```js
+class Computadora{
+    //atributos
+    constructor(marca){
+        this.marca="marca"
+        this.color=""
+        this.tipoCase="tower"
+    }
+    //metodos
+    encender(){
+        return "estoy encendiendo..."
+    },
+    apagar(){
+        return "estoy cerrando cesion..."
+    },
+    escribir(){
+        return "estoy haciendo un informe"
+    }
+    jugar(){
+        return "estoy jugando"
+    }
+}
+//instanciar
+let miPC=new Computadora(gigabyte)
+miPC.endender()
+
+```
