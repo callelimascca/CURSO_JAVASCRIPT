@@ -260,7 +260,143 @@ Contador.prototype={
 > 2. Que use PascalCase
 
 ## RECURSION EN FUNCIONES (tareas)
+La recursión en JavaScript, como en otros lenguajes de programación, se refiere a la técnica en la que una función se llama a sí misma para resolver un problema. Cada llamada recursiva suele acercarse a una solución más sencilla o más pequeña hasta llegar a un caso base, que es la condición que detiene la recursión.
+
+Ejemplo básico de recursión en JavaScript
+Un ejemplo clásico de recursión es el cálculo del factorial de un número.
+
+Factorial de un número:
+El factorial de un número n (denotado como n!) se define como el producto de todos los números enteros positivos desde 1 hasta n. Matemáticamente:
+
+- `n! = n * (n-1) * (n-2) * ... * 1`
+- Caso base: `0! = 1` y `1! = 1`
+Implementación recursiva en JavaScript:
+```js
+function factorial(n) {
+  // Caso base: cuando n es 0 o 1, el factorial es 1
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  // Paso recursivo: n * factorial de (n - 1)
+  return n * factorial(n - 1);
+}
+
+console.log(factorial(5)); // Resultado: 120
+```
+En este ejemplo:
+
+El caso base es cuando n es igual a 0 o 1, en cuyo caso se retorna 1.
+Si n es mayor que 1, la función se llama a sí misma con n-1 y multiplica ese resultado por n (el paso recursivo).
+Explicación paso a paso de la recursión:
+Para calcular factorial(5), el proceso sería el siguiente:
+
+- `factorial(5)` devuelve `5 * factorial(4)`
+- `factorial(4)` devuelve `4 * factorial(3)`
+- `factorial(3)` devuelve `3 * factorial(2)`
+- `factorial(2)` devuelve `2 * factorial(1)`
+- `factorial(1)` devuelve `1 (caso base)`
+  
+Luego, los resultados se "desenrollan" en orden inverso:
+
+- `factorial(1) = 1`
+- `factorial(2) = 2 * 1 = 2`
+- `factorial(3) = 3 * 2 = 6`
+- `factorial(4) = 4 * 6 = 24`
+- `factorial(5) = 5 * 24 = 120`
+  
+Casos base y la importancia de la recursión
+Es fundamental tener un caso base en la recursión para evitar que la función se llame indefinidamente, lo que llevaría a un desbordamiento de pila (stack overflow). El caso base es la condición en la que la recursión termina.
+
+Otros ejemplos de recursión
+Suma de los primeros n números
+Este es otro ejemplo de una función recursiva. La suma de los primeros n números es:
+
+`Suma(0) = 0`
+`Suma(n) = n + Suma(n-1)`
+
+Implementación en JavaScript:
+
+```js
+function suma(n) {
+  // Caso base
+  if (n === 0) {
+    return 0;
+  }
+  // Paso recursivo
+  return n + suma(n - 1);
+}
+
+console.log(suma(5)); // Resultado: 15 (5 + 4 + 3 + 2 + 1)
+```
+#### Peligros de la recursión:
+Desbordamiento de pila (stack overflow): Si no hay un caso base adecuado o si el caso base no se alcanza, la recursión seguirá ocurriendo hasta que el programa se quede sin memoria de pila.
+
+Eficiencia: La recursión puede ser menos eficiente en comparación con la iteración en algunos casos, debido a que las funciones recursivas requieren una sobrecarga adicional para almacenar el estado de las llamadas recursivas. Algunas funciones recursivas pueden ser optimizadas utilizando técnicas como la recursión de cola o memorización.
+
+#### Recursión de cola
+Una forma especial de optimizar la recursión es la recursión de cola (tail recursion). En este caso, la llamada recursiva es la última operación de la función, lo que permite a los motores JavaScript optimizar el uso de la pila.
+
+Ejemplo de recursión de cola:
+```js
+function factorialTail(n, acc = 1) {
+  // Caso base
+  if (n === 0 || n === 1) {
+    return acc;
+  }
+  // Paso recursivo
+  return factorialTail(n - 1, n * acc);
+}
+
+console.log(factorialTail(5)); // Resultado: 120
+```
+
+En este caso, el acumulador `acc` mantiene el resultado parcial, y la llamada recursiva se realiza al final de la función, lo que permite optimizar la recursión.
+
+```js
+function factorial(n){
+    if n==1{
+        return 1
+    }
+    return n * factorial(n-1)
+}
+console.log(factorial(5))
+```
 ## FUNCIONES CALLBACK (tareas)
+Es una función callback es una función que se pasa como argumento a otra función y se ejecuta después de que la otra función haya completado su tarea. Las funciones callback se utilizan comúnmente para manejar operaciones asincrónicas, como la lectura de archivos, las solicitudes HTTP, o cualquier otra operación que no se complete de inmediato.
+- **Ejemplo básico de una función callback**
+En este ejemplo, tenemos una función saludar, que toma una función de callback llamada despedirse:
+```js
+function saludar(nombre, callback) {
+  console.log("Hola, " + nombre);
+  // Llamamos a la función callback después de la operación
+  callback();
+}
+
+function despedirse() {
+  console.log("Adiós!");
+}
+
+saludar("Juan", despedirse);  // Salida: "Hola, Juan" luego "Adiós!"
+```
+#### Funciones callback en operaciones asincrónicas
+Uno de los usos más comunes de las funciones callback es en operaciones asincrónicas. Cuando necesitas realizar una operación como una solicitud HTTP o leer un archivo, no puedes simplemente esperar que se complete de manera sincrónica porque podría bloquear el hilo de ejecución. En su lugar, usas una función callback para ejecutar un código después de que la operación haya terminado.
+
+- **Ejemplo de callback con setTimeout (simulando asincronía)**
+```js
+console.log("Inicio");
+
+setTimeout(function() {
+  console.log("Esto se ejecuta después de 2 segundos");
+}, 2000);
+
+console.log("Fin");
+//salida
+// Inicio
+// Fin
+// Esto se ejecuta después de 2 segundos
+
+```
+
 # CLASES 
 Las clases en javascript llegan en la version `ECMAScript6`, javascript no tenia al igual que en otros lenguajes de programacion orientadas a objetos las `clases` ya que javascript se enfocaba en la `programacion funcional` sin embargo con la llegada de `ES6` adopta ser un lenguaje de programacion multiparadigma, entre ellos la `programacion orientada de objetos` con la llegada de las `clases`.
 ## Estructura de una clase en JavaScript
