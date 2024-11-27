@@ -171,6 +171,13 @@ Ejemplo:
 let arr = [1, 2, 3];
 arr.reverse();  // [3, 2, 1]
 ```
+- **split():** convertir texto a array.
+```js
+let texto = "hola mundo"
+// ["hola", "mundo"]
+let listaTexto=texto.split("")
+console.log(listaTexto)
+```
 ## Objetos
 ## Creacion
 ## Acceder a un elemento del objeto
