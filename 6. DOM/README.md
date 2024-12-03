@@ -82,6 +82,66 @@ Son los siguientes:
 ```js
 let parrafo=document.getElementById()
 ```
+- **getElementByClassName** - Devuelve un elemento que tenga una clase especifica.
+```html
+<h1 id="titulo">Titulo</h1>
+<p class="parrafo">Parrafo uno</p>
+<p id="parrafo_dos">Parrafo dos</p>
+```
+```js
+let parrafo=document.getElemtByClassName("parrafo")
+```
+- **querySelector** - Devuelve el primer elemento que coincida con el selector ingresado puede ser un id, class, name o tag.
+  
+```html
+<h1 id="titulo">Titulo</h1>
+<p class="parrafo">Parrafo uno</p>
+<p id="parrafo_dos">Parrafo dos</p>
+<h2>subtitulo</h2>
+```
+```js
+let titulo=document.querySelector("#titulo")
+let primerParrafo=document.querySelector(".parrafo")
+let segundoParrafo=document.querySelector("#parrafo_dos")
+let subtitulo=document.querySelector("h2")
+```
+**Averiguar que otros selectores o metodos existe para recorrer el DOM tiene JavaScript**
 
+1. **getElementsByTagName** Selecciona todos los elementos que tienen un nombre de etiqueta específico. También devuelve una colección de nodos.
+  ```js
+  let elementos = document.getElementsByTagName('div')
+  ```
+2. **querySelectorAll** - Selecciona todos los elementos que coinciden con el selector CSS proporcionado. Devuelve una NodeList (similar a un array).
+```js
+  let elementos = document.querySelectorAll('.miClase');
+```  
+3. **children** - Similar a childNodes, pero solo devuelve los elementos hijos (ignora los nodos de texto y comentarios).
+```js
+let elementosHijos = document.getElementById('miId').children;
+```
+4. **parentNode** -  Selecciona el nodo padre de un elemento.
+```js
+let padre = document.getElementById('miId').parentNode;
+```
+## Manipulacion del DOM 
+- **createElement** - Este metodo crea un elemento HTML con el nombre que le pasemos por parametro.
+```js
+let titulo=document.createElement("h1")
+```
+- **appendChild** - Nos permite hacer hijo un elemento dentro de otro.
+```js
+let titulo=document.createElement("h1")
+let body=document.querySelector("body")
+body.appendChild(titulo)
+```
+## Propiedades de los elementos DOM
+- **className** - Permite setear o capturar el nombre de la clase que tenga un elemento.
+- **id** - lo mismo que `className` pero con el atributo id.
+- **inner HTML** - Devuelve o permite insertar codigo HTML (INCLUYENDO TAG Y TEXTO)
+- **inner Text** - Devuelve o permite insertar texto en un elemento
+- **textContent** - Nos permite agregar o modificar el contenido de un elemento.
+- **value** - Nos permite optener o setearvalores de un elemento `input`.
+ ## Acciones  o eventos con elementos en el DOM (averiguar)
 > [!NOTE]
 > Tecnologias para el procesamiento de texto a travez de marca `markup` (etiquetas- nos permite a travez de `keyword` darle un estilo o significado a un contenido de las etiquetas). La primera tecnologia fue `XML` despues nace `html`, despues la ultima generacion de tecnologia de marcado de texto `markdown`.
+
