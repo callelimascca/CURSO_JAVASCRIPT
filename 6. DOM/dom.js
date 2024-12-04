@@ -9,7 +9,7 @@ let respuesta=prompt("escribe el color azul o rojo para ver el cuadro")
 if(respuesta=="rojo"){
     newElem.className="cuadro_rojo"
 }else{
-    newElem.className="cuadro azul"
+    newElem.className="cuadro_azul"
 }
 // newElem.style="background:red; width:200px; heigth:200px"
 let body=document.querySelector("body")

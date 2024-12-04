@@ -179,6 +179,26 @@ let listaTexto=texto.split("")
 console.log(listaTexto)
 ```
 ## Objetos
+Los objetos son tipos de datos estructurados similares a las listas, para acceder a un elemento de la lista JavaScript les asignaba indices, en este caso los objetos como unica diferencia de las listas nosotros podremos asignar el nombre del elemento al cual deseamos acceder a esto se le conoce como: `clave:valor`
+Cada `clave:valor` es un elemento de un objeto si deseamos crear mas  elementos tendremos que separarlo por comas.
 ## Creacion
+Para crear un objeto debemos encerrar a los elementos en llaves `{}` para cada elemento estara conformado por su `clave:valor`
+```js
+let datosJory=["Jory","Rodriguez",20,"M"]
+let datosJoryObjeto={
+  nombre:"Jory",
+  apellido:"Rodriguez",
+  edad:30,
+  sexo:"Masculino",
+  ganado:["el primo","los chamos","las enfermeras"],
+  direccion:{
+    tipoCalle:"pasaje",
+    nombre:"querobamba",
+    numVivienda:22,
+    numCuarto:4
+  }
+}
+accion:()=>{console.log("hola soy Jory")}
+```
 ## Acceder a un elemento del objeto
 ## Metodos
